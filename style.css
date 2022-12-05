@@ -1,0 +1,259 @@
+/* Base
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+    gap: 32px;
+    display: grid;
+    justify-items: center;
+    color: #1a1a1a;
+    background-color: #f7f7f7;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#header {
+    gap: 64px;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    padding-top: 56px;
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+#header nav ul {
+    gap: 16px;
+    display: flex;
+    list-style: none;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#header nav ul li {
+    width: 150px;
+    display: block;
+    font-size: 1rem;
+    padding: 16px 32px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 2px solid transparent;
+}
+
+#header nav ul li a {
+    color: #1a1a1a;
+    text-transform: uppercase;
+}
+
+#header nav ul li:hover,
+#header nav ul li:hover a {
+    color: #e21;
+    border-color: #e21;
+    transition: ease-in-out .3s;
+}
+
+#header article {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 32px;
+}
+
+#header article i {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Main Introduction
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+main {
+    display: grid;
+    max-width: 960px;
+}
+
+main #introduction,
+main #benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+}
+
+main #introduction article {
+    gap: 32px;
+    padding: 32px;
+    display: grid;
+    text-align: right;
+    font-size: 1.25rem;
+    background: #ffffff;
+    justify-items: end;
+    align-content: center;
+}
+
+main #introduction article h1 {
+    font-size: 2rem;
+}
+
+main #introduction article p {
+    max-width: 35ch;
+}
+
+main #introduction article a {
+    color: #fff;
+    font-size: 1rem;
+    background: #e21;
+    padding: 16px 32px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+main #introduction picture img {
+    display: block;
+    max-width: 100%;
+}
+
+@media (max-width: 840px) {
+    main #introduction article h1 {
+        font-size: 1.25rem;
+    }
+
+    main #introduction article {
+        justify-items: center;
+        font-size: 1rem;
+    }
+
+    main #introduction article p {
+        text-align: center;
+    }
+}
+
+/* Main Benefits
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+main #benefits>article {
+    display: flex;
+    align-items: center;
+    background: url(./imgs/onda.svg);
+}
+
+main.dark #benefits>article {
+    background: none;
+}
+
+main #benefits>article h2 {
+    padding: 32px;
+    font-size: 4rem;
+    text-align: right;
+    color: #11111133;
+    background: inherit;
+    text-transform: uppercase;
+}
+
+main #benefits>section {
+    padding: 32px;
+    background: #fff;
+}
+
+main #benefits>section article {
+    gap: 8px 32px;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    border-left: 4px solid transparent;
+}
+
+main #benefits>section article svg {
+    width: 24px;
+    fill: #1a1a1a;
+}
+
+main #benefits>section article p {
+    grid-column: 2;
+}
+
+@media (max-width: 840px) {
+
+    main #benefits>article h2 {
+        padding: 64px;
+        font-size: 3rem;
+    }
+
+    main #benefits>section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    main #benefits>section article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main #benefits>section article img {
+        width: 40px;
+    }
+
+    main #benefits>section article p {
+        text-align: center;
+    }
+
+}
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+    width: 100%;
+    display: flex;
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+    justify-content: center;
+}
+
+/* Theme
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body.dark {
+    color: #f7f7f7;
+    background-color: #1a1a1a;
+}
+
+#header.dark picture img {
+    filter: invert(1);
+}
+
+#header.dark nav ul li {
+    background-color: #ffffff11;
+}
+
+#header.dark nav ul li a {
+    color: #f7f7f7;
+}
+
+main.dark #introduction article {
+    background: #ffffff11;
+}
+
+main.dark #benefits>article h2 {
+    color: #f7f7f733;
+}
+
+main.dark #benefits>section {
+    background: #ffffff11;
+}
+
+main.dark #benefits>section article svg {
+    fill: #f7f7f7;
+}
