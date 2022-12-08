@@ -81,6 +81,12 @@ body {
     user-select: none;
 }
 
+@media(max-width: 500px) {
+   #header article {
+       padding: 16px 4px;
+   }
+}
+
 /* Main Introduction
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 main {
